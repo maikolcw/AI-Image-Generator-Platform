@@ -10,3 +10,5 @@ tech stack:
 
 * React
 * Vite
+* Tailwindcss
+* File-saver
