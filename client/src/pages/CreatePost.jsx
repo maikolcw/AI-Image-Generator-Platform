@@ -18,7 +18,7 @@ const CreatePost = () => {
     const [loading, setLoading] = useState(false);
 
     const generateImage = async () => {
-        
+
     };
 
     const handleSubmit = async () => {
@@ -26,13 +26,13 @@ const CreatePost = () => {
 
     };
 
-    const handleChange = async (e) => {
+    const handleChange = (e) => setForm(
+        { ...form, [e.target.name]: e.target.value }
+    );
 
-    };
-
-    const handleSurpriseMe = async () => {
-
-
+    const handleSurpriseMe = () => {
+        const randomPrompt = getRandomPrompt(form.prompt);
+        setForm({ ...form, prompt: randomPrompt });
     };
 
 
