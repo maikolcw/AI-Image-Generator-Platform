@@ -13,3 +13,10 @@ tech stack:
 * Tailwindcss
 * File-saver
 * React-router-dom
+* Cloudinary
+* Cors
+* Dotenv
+* Express
+* Mongoose
+* Nodemon
+* Openai
