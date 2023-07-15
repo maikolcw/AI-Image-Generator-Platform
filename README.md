@@ -12,7 +12,7 @@ How to start:
 6. Npm start
 
 
-tech stack:
+Tech stack:
 
 * React
 * Vite
