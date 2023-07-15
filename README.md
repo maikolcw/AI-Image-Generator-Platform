@@ -4,7 +4,13 @@ Building a website where users can generate images via prompt from the amazing D
 
 How to start:
 
-1. placeholder
+1. Cd into client folder
+2. Npm install
+3. Npm run dev
+4. Cd into server folder
+5. Npm install
+6. Npm start
+
 
 tech stack:
 
