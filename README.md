@@ -7,7 +7,7 @@ Prerequisites:
 * A mongo account with password for user for the database
 * You will need the API key from openai.com, in your account generate API Key
 * You will also need the 3 pieces of info from a Cloudinary account (it's free), which can be found from the dashboard.
-* Sample .env should like like this:
+* Sample .env should look like this:
 ```
 OPENAI_API_KEY=
 MONGODB_URL=
