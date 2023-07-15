@@ -1,6 +1,6 @@
 About:
 
-Building a website where users can generate images via prompt from the amazing Dall E API!
+Web application that harnesses the power of DALL-E AI! Users can generate images, showcase them on the website, and download and share them with friends!
 
 Prerequisites:
 * You'will need a .env file for server side
