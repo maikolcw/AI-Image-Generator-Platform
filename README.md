@@ -16,7 +16,7 @@ CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
 ```
 * You will need a .env file for client side
-* * Sample client .env should look like this:
+* Sample client .env should look like this:
 ```
 VITE_SERVER_POST="http://localhost:8080/api/v1/post"
 VITE_SERVER_DALLE="http://localhost:8080/api/v1/dalle"
