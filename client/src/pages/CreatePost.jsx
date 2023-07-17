@@ -83,14 +83,14 @@ const CreatePost = () => {
     return (
         <section className="max-w-7xl mx-auto">
             <div>
-                <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
-                <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">Generate beautiful and visually striking images through DALL-E AI and share it with the community</p>
+                <h1 className="font-extrabold text-white text-[32px]">Create</h1>
+                <p className="mt-2 text-white text-[14px] max-w-[500px]">Generate beautiful and visually striking images through DALL-E AI and share it with the community!</p>
             </div>
 
-            <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
+            <form className="mt-8 max-w-3xl" onSubmit={handleSubmit}>
                 <div className="flex flex-col gap-5">
                     <FormField
-                        labelName="Your Name"
+                        labelName="Your Name:"
                         type="text"
                         name="name"
                         placeholder="Jane Doe"
@@ -99,7 +99,7 @@ const CreatePost = () => {
                     />
 
                     <FormField
-                        labelName="Prompt"
+                        labelName="Prompt:"
                         type="text"
                         name="prompt"
                         placeholder="An stunningly beautiful angelic figure floating above a black hole in outer space..."
@@ -143,12 +143,12 @@ const CreatePost = () => {
                 </div>
 
                 <div className="mt-10">
-                    <p className="mt-2 text-[#666e75] text-[14px]">** You can share this image with the community! **</p>
+                    <p className="mt-2 text-[#b0aeae] text-[14px]">** You can share this image with the community! **</p>
                     <button
                         type="submit"
                         className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
                     >
-                        {loading ? 'Sharing...' : 'Share with the Community'}
+                        {loading ? 'Adding...' : 'Add to the collection'}
                     </button>
                 </div>
             </form>
