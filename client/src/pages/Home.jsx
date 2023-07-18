@@ -80,12 +80,11 @@ const Home = () => {
 
             <div className="mt-10">
                 {loading ? (
-                    <div className="flex justify-center items-center">
-                        <p className="flex flex-row mt-2 text-[#b0aeae] text-[14px]">** Due to site inactivity on Render.com, server might need some time to spin back up **</p>
-                        <div className="flex flex-row">
+                    <div className="flex justify-center items-center flex-col mt-8">
+                        <p className=" mt-2 text-[#b0aeae] text-[14px]">** Due to site inactivity from free hosting on Render, server will need some time to spin back up **</p>
+                        <div className="mt-8">
                             <Loader />
                         </div>
-
                     </div>
                 ) : (
                     <>
