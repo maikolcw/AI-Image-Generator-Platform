@@ -36,8 +36,11 @@ router.route('/').post(async (req, res) => {
         res.status(200).json({ photo: image });
     } catch (error) {
         console.error('Error response from OpenAI:', error.response ? error.response.data : error.message);
-        res.status(500).send(error?.response?.data?.error?.message || 'Something went wrong');
+        
+        if (error.response && error.response.data.error.code === 'billing_hard_limit_reached') {
+            res.status(403).json({ error: 'Billing hard limit has been reached. Please check your OpenAI account billing status.' });
+        } else {
+            res.status(500).send(error?.response?.data?.error?.message || 'Something went wrong');
+        }
     }
 });
-
-export default router;
