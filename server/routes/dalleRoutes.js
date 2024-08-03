@@ -20,6 +20,11 @@ router.route('/').post(async (req, res) => {
     try {
         const { prompt } = req.body;
 
+        // Validate the prompt
+        if (!prompt || typeof prompt !== 'string') {
+            return res.status(400).json({ error: 'Invalid prompt provided' });
+        }
+
         const aiResponse = await openai.createImage({
             prompt,
             n: 1,
@@ -30,8 +35,8 @@ router.route('/').post(async (req, res) => {
         const image = aiResponse.data.data[0].b64_json;
         res.status(200).json({ photo: image });
     } catch (error) {
-        console.error(error);
-        res.status(500).send(error?.response.data.error.message || 'Something went wrong');
+        console.error('Error response from OpenAI:', error.response ? error.response.data : error.message);
+        res.status(500).send(error?.response?.data?.error?.message || 'Something went wrong');
     }
 });
 
