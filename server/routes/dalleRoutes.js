@@ -26,7 +26,6 @@ router.route('/').post(async (req, res) => {
         }
 
         const aiResponse = await openai.createImage({
-            model: 'dall-e-2',
             prompt,
             n: 1,
             size: '1024x1024',

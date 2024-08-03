@@ -31,10 +31,15 @@ const CreatePost = () => {
                     }),
                 });
 
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Something went wrong');
+                }
+
                 const data = await response.json();
                 setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` });
             } catch (err) {
-                alert(err);
+                alert(err.message);
             } finally {
                 setGeneratingImg(false);
             }
@@ -57,11 +62,16 @@ const CreatePost = () => {
                     body: JSON.stringify({ ...form }),
                 });
 
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Something went wrong');
+                }
+
                 await response.json();
                 alert('Success');
                 navigate('/');
             } catch (err) {
-                alert(err);
+                alert(err.message);
             } finally {
                 setLoading(false);
             }
@@ -153,7 +163,7 @@ const CreatePost = () => {
                 </div>
             </form>
         </section>
-    )
+    );
 }
 
-export default CreatePost
+export default CreatePost;
