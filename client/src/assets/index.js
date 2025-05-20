@@ -1,9 +1,9 @@
 import download from './download.png';
-import preview from './preview.png';
+import smiley from './smiley.png';
 import openai from './openai.png';
 
 export {
   download,
-  preview,
+  smiley,
   openai,
 };

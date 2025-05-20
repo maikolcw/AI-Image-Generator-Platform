@@ -1,5 +1,3 @@
-import React from 'react';
-
 const FormField = ({
     labelName,
     type,
@@ -24,7 +22,7 @@ const FormField = ({
                     onClick={handleSurpriseMe}
                     className="font-semibold text-xs bg-[#6469ff] py-1 px-2 rounded-[5px] text-white"
                 >
-                    Randomize
+                    I'm feeling lucky!
                 </button>
             )}
         </div>
